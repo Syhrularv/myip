@@ -11,5 +11,10 @@ echo ""
 while [ 1 ]
 do
 sleep 2
-echo -e $r2"Your IP "$w": "$r2"$ip"
+if [ $ip="" ]
+then
+  echo -e $w"["$r2"!"$w"]"$r2" Erorr! Check your connection"
+else
+  echo -e $r2"Your IP "$w": "$r2"$ip"
+fi
 done
